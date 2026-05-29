@@ -16,21 +16,32 @@ body {
 /* Barra de navegação fixa no topo, com menu de links principais. */
 /* position: sticky mantém o menu visível enquanto o usuário rola a página. */
 .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #00bcd4;
     padding: 1.5rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    gap: 1.5rem;
 }
 
-h1 {
+.navbar h1 {
     color: white;
     font-size: 2rem;
-    /*text-align: left;*/
     text-align: center;
-    margin: 0 0 1.5rem 0;
-    
+    margin: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 .sublinhado {
@@ -189,6 +200,23 @@ h1 {
     outline: none;
     border-color: #00bcd4;
     box-shadow: 0 0 5px rgba(0, 188, 212, 0.3);
+}
+
+.agenda-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.agenda-link p {
+    color: #333;
+    line-height: 1.6;
+    max-width: 780px;
+}
+
+.agenda-link .btn-adicionar {
+    align-self: flex-start;
 }
 
 .btn-adicionar {

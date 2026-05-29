@@ -31,6 +31,11 @@ def agenda():
     # Página de gerenciamento de responsabilidades
     return render_template('agenda.html')
 
+@app.route('/listagem')
+def listagem():
+    # Página de listagem de tarefas e ações sobre responsabilidades
+    return render_template('listagem.html')
+
 @app.route('/relatorio')
 def relatorio():
     # Página de relatórios
@@ -51,6 +56,10 @@ def index_html():
 @app.route('/agenda.html')
 def agenda_html():
     return render_template('agenda.html')
+
+@app.route('/listagem.html')
+def listagem_html():
+    return render_template('listagem.html')
 
 @app.route('/relatorio.html')
 def relatorio_html():

@@ -14,7 +14,8 @@ let responsabilidades = [];
 
 // Envia o formulário para criar uma nova responsabilidade.
 // O evento é interceptado para evitar recarregar a página.
-formResponsabilidade.addEventListener('submit', async function(e) {
+if (formResponsabilidade) {
+    formResponsabilidade.addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const descricao = document.getElementById('descricao').value;
@@ -45,6 +46,7 @@ formResponsabilidade.addEventListener('submit', async function(e) {
         alert('Erro ao comunicar com o servidor');
     }
 });
+}
 
 // Busca todas as responsabilidades do backend e atualiza a tabela.
 // Esta função é usada na inicialização e sempre que ocorre uma alteração.
@@ -61,6 +63,10 @@ async function carregarResponsabilidades() {
 // Atualiza a tabela HTML que mostra as responsabilidades.
 // Se não houver registros, exibe uma mensagem padrão.
 function atualizarTabela() {
+    if (!tabelaResponsabilidades) {
+        return;
+    }
+
     tabelaResponsabilidades.innerHTML = '';
     
     if (responsabilidades.length === 0) {

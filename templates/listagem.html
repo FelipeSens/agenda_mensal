@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_novo.css') }}">
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Agenda Mensal</h1>
+      <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/agenda">Agenda</a></li>
+        <li><a href="/listagem">Listagem de Tarefas</a></li>
+        <li><a href="/relatorio">Relatório</a></li>
+        <li><a href="/config">Configurações</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <section id="listagem" class="section">
+        <h2>📋 Listagem de Tarefas</h2>
+        <p>Veja a tabela completa de responsabilidades e use as ações de Alterar, Editar e Excluir.</p>
+
+        <div class="agenda-container">
+          <table class="tabela-responsabilidades">
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Situação</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaResponsabilidades">
+              <tr>
+                <td colspan="4" class="sem-dados">Nenhuma responsabilidade adicionada ainda</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
