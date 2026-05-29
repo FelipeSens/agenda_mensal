@@ -1,0 +1,349 @@
+/* Reset básico para garantir que margens, padding e box-sizing sejam iguais em todos os navegadores. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração global do corpo da página. Define fonte, cor de fundo e layout principal. */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegação fixa no topo, com menu de links principais. */
+/* position: sticky mantém o menu visível enquanto o usuário rola a página. */
+.navbar {
+    background-color: #00bcd4;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+    /*text-align: left;*/
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    
+}
+
+.sublinhado {
+    /*text-decoration: underline;
+    text-decoration-color: #eff1f1;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;*/
+    border-bottom: 4px solid #eff1f1;
+    padding-bottom: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    
+}
+
+.nav-menu a:hover {
+    color: #00bcd4;
+    background-color: rgb(252, 251, 251);
+    border-radius: 10px;
+}
+
+/* Container centraliza o conteúdo e define limites de largura. */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Cada página usa uma seção principal para separar o conteúdo. */
+.section {
+    margin-top: 1rem;
+}
+
+/* Estilo da seção Home */
+.home-content h2 {
+    color: #00bcd4;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.description-card {
+    background-color: #f5f5f5;
+    border-left: 5px solid #00bcd4;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-card h3 {
+    color: #00bcd4;
+    margin-top: 0;
+}
+
+.description-card p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Grid de features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    background-color: #e0f7fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid #00bcd4;
+    box-shadow: 0 2px 8px rgba(0, 188, 212, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.feature-item h4 {
+    color: #00bcd4;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.feature-item p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Call to Action */
+.cta-section {
+    display: none;
+}
+
+/* Estilos do bloco de formulário de criação de tarefa. */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 5px solid #00bcd4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+    color: #00bcd4;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.3);
+}
+
+.btn-adicionar {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: #0097a7;
+}
+
+.btn-relatorio {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-relatorio:hover {
+    background-color: #45a049;
+}
+
+/* Estilo do painel onde a lista de responsabilidades é exibida. */
+.agenda-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-container h3 {
+    color: #00bcd4;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.tabela-responsabilidades {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tabela-responsabilidades thead {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.tabela-responsabilidades th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #00bcd4;
+}
+
+.tabela-responsabilidades td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.tabela-responsabilidades tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.sem-dados {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Botões usados nas ações da tabela: editar, excluir e alterar situação. */
+.btn-acao {
+    padding: 0.5rem 0.8rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: #45a049;
+}
+
+.btn-excluir {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-excluir:hover {
+    background-color: #da190b;
+}
+
+.btn-status {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn-status:hover {
+    background-color: #e68900;
+}
+
+/* Labels de situação mostram visualmente o status da tarefa. */
+/* Cada classe combina cor e texto para facilitar a leitura rápida. */
+.situacao-pendente {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.situacao-em_progresso {
+    background-color: #cfe8ff;
+    color: #084298;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.situacao-concluido {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* H2 das seções */
+.section h2 {
+    color: #00bcd4;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Placeholder para outras seções */
+.section p {
+    color: #666;
+    font-size: 1.1rem;
+}
